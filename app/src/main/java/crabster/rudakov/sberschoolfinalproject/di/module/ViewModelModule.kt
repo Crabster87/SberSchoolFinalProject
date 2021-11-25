@@ -1,10 +1,10 @@
-package crabster.rudakov.sberschoollesson19hwk.di.module
+package crabster.rudakov.sberschoolfinalproject.di.module
 
 import androidx.lifecycle.ViewModel
-import crabster.rudakov.sberschoollesson19hwk.di.annotation.ViewModelKey
-import crabster.rudakov.sberschoollesson19hwk.ui.country.viewModel.CountryViewModel
-import crabster.rudakov.sberschoollesson19hwk.ui.list.viewModel.ListViewModel
-import crabster.rudakov.sberschoollesson19hwk.ui.main.viewModel.MainViewModel
+import crabster.rudakov.sberschoolfinalproject.di.annotation.ViewModelKey
+import crabster.rudakov.sberschoolfinalproject.ui.country.viewModel.CountryViewModel
+import crabster.rudakov.sberschoolfinalproject.ui.list.viewModel.ListViewModel
+import crabster.rudakov.sberschoolfinalproject.ui.main.viewModel.MainViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

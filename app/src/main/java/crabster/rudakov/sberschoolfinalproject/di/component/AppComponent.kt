@@ -1,8 +1,8 @@
-package crabster.rudakov.sberschoollesson19hwk.di.component
+package crabster.rudakov.sberschoolfinalproject.di.component
 
 import android.app.Application
-import crabster.rudakov.sberschoollesson19hwk.App
-import crabster.rudakov.sberschoollesson19hwk.di.module.ActivityBuilderModule
+import crabster.rudakov.sberschoolfinalproject.App
+import crabster.rudakov.sberschoolfinalproject.di.module.ActivityBuilderModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

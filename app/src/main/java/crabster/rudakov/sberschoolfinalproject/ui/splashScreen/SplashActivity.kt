@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.splashScreen
+package crabster.rudakov.sberschoolfinalproject.ui.splashScreen
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,8 +8,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.ui.main.view.MainActivity
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.ui.main.view.MainActivity
 import dagger.android.support.DaggerAppCompatActivity
 
 @SuppressLint("CustomSplashScreen")

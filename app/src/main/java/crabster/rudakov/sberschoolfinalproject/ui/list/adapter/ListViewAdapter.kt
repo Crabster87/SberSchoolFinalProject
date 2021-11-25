@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.list.adapter
+package crabster.rudakov.sberschoolfinalproject.ui.list.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryItem
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
 import java.util.*
 
 /**

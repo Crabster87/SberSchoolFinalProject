@@ -1,10 +1,10 @@
-package crabster.rudakov.sberschoollesson19hwk.data.api.`interface`
+package crabster.rudakov.sberschoolfinalproject.data.api.`interface`
 
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryInfo
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryItem
-import crabster.rudakov.sberschoollesson19hwk.data.model.ImageList
-import crabster.rudakov.sberschoollesson19hwk.utils.Constants
-import crabster.rudakov.sberschoollesson19hwk.utils.Constants.LIST_URL
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryInfo
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
+import crabster.rudakov.sberschoolfinalproject.data.model.ImageList
+import crabster.rudakov.sberschoolfinalproject.utils.Constants
+import crabster.rudakov.sberschoolfinalproject.utils.Constants.LIST_URL
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Headers

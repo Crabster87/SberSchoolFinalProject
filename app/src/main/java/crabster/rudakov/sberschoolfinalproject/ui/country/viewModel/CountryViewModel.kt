@@ -1,12 +1,12 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.country.viewModel
+package crabster.rudakov.sberschoolfinalproject.ui.country.viewModel
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryInfo
-import crabster.rudakov.sberschoollesson19hwk.data.model.Hits
-import crabster.rudakov.sberschoollesson19hwk.data.repository.RetrofitRepository
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryInfo
+import crabster.rudakov.sberschoolfinalproject.data.model.Hits
+import crabster.rudakov.sberschoolfinalproject.data.repository.RetrofitRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject

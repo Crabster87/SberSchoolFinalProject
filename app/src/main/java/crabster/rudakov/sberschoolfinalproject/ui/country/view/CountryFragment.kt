@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.country.view
+package crabster.rudakov.sberschoolfinalproject.ui.country.view
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -15,11 +15,11 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.pixplicity.sharp.Sharp
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.ui.country.adapter.ImageViewAdapter
-import crabster.rudakov.sberschoollesson19hwk.ui.country.viewModel.CountryViewModel
-import crabster.rudakov.sberschoollesson19hwk.ui.main.factory.ViewModelFactory
-import crabster.rudakov.sberschoollesson19hwk.ui.main.viewModel.MainViewModel
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.ui.country.adapter.ImageViewAdapter
+import crabster.rudakov.sberschoolfinalproject.ui.country.viewModel.CountryViewModel
+import crabster.rudakov.sberschoolfinalproject.ui.main.factory.ViewModelFactory
+import crabster.rudakov.sberschoolfinalproject.ui.main.viewModel.MainViewModel
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_country.*
 import java.util.*

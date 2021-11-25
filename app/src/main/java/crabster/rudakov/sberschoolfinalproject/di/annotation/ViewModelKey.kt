@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.di.annotation
+package crabster.rudakov.sberschoolfinalproject.di.annotation
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

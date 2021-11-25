@@ -1,7 +1,7 @@
-package crabster.rudakov.sberschoollesson19hwk.di.module
+package crabster.rudakov.sberschoolfinalproject.di.module
 
-import crabster.rudakov.sberschoollesson19hwk.ui.main.view.MainActivity
-import crabster.rudakov.sberschoollesson19hwk.ui.splashScreen.SplashActivity
+import crabster.rudakov.sberschoolfinalproject.ui.main.view.MainActivity
+import crabster.rudakov.sberschoolfinalproject.ui.splashScreen.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

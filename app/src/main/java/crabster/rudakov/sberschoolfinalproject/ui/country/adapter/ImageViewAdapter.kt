@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.country.adapter
+package crabster.rudakov.sberschoolfinalproject.ui.country.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.data.model.Hits
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.data.model.Hits
 
 /**
  * Класс-адаптер списка изображений RecyclerView(2-ой экран)

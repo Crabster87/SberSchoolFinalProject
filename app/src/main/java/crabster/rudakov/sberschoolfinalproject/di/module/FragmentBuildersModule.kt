@@ -1,7 +1,7 @@
-package crabster.rudakov.sberschoollesson19hwk.di.module
+package crabster.rudakov.sberschoolfinalproject.di.module
 
-import crabster.rudakov.sberschoollesson19hwk.ui.country.view.CountryFragment
-import crabster.rudakov.sberschoollesson19hwk.ui.list.view.ListFragment
+import crabster.rudakov.sberschoolfinalproject.ui.country.view.CountryFragment
+import crabster.rudakov.sberschoolfinalproject.ui.list.view.ListFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

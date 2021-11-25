@@ -1,8 +1,8 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.main.viewModel
+package crabster.rudakov.sberschoolfinalproject.ui.main.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryItem
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
 import javax.inject.Inject
 
 /**

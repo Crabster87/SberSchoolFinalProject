@@ -1,10 +1,10 @@
-package crabster.rudakov.sberschoollesson19hwk.data.repository
+package crabster.rudakov.sberschoolfinalproject.data.repository
 
-import crabster.rudakov.sberschoollesson19hwk.data.api.RetrofitClient
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryInfo
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryItem
-import crabster.rudakov.sberschoollesson19hwk.data.model.ImageList
-import crabster.rudakov.sberschoollesson19hwk.utils.Constants
+import crabster.rudakov.sberschoolfinalproject.data.api.RetrofitClient
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryInfo
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
+import crabster.rudakov.sberschoolfinalproject.data.model.ImageList
+import crabster.rudakov.sberschoolfinalproject.utils.Constants
 import io.reactivex.Single
 import javax.inject.Inject
 

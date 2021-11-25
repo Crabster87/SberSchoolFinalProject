@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="crabster.rudakov.sberschoollesson19hwk.ui.list.view.ListFragment"
+        android:name="crabster.rudakov.sberschoolfinalproject.ui.list.view.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/countryFragment"
-        android:name="crabster.rudakov.sberschoollesson19hwk.ui.country.view.CountryFragment"
+        android:name="crabster.rudakov.sberschoolfinalproject.ui.country.view.CountryFragment"
         android:label="fragment_country"
         tools:layout="@layout/fragment_country">
         <action

@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.main.view
+package crabster.rudakov.sberschoolfinalproject.ui.main.view
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -9,9 +9,9 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.ui.main.factory.ViewModelFactory
-import crabster.rudakov.sberschoollesson19hwk.ui.main.viewModel.MainViewModel
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.ui.main.factory.ViewModelFactory
+import crabster.rudakov.sberschoolfinalproject.ui.main.viewModel.MainViewModel
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 

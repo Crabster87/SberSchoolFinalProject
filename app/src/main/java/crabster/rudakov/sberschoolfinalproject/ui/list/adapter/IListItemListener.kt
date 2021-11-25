@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.list.adapter
+package crabster.rudakov.sberschoolfinalproject.ui.list.adapter
 
 /**
  * Интерфейс, описывающий действия при клике пользователем

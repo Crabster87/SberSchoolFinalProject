@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.list.view
+package crabster.rudakov.sberschoolfinalproject.ui.list.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,13 +9,13 @@ import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.ui.main.factory.ViewModelFactory
-import crabster.rudakov.sberschoollesson19hwk.ui.list.adapter.IListItemListener
-import crabster.rudakov.sberschoollesson19hwk.ui.list.adapter.ListViewAdapter
-import crabster.rudakov.sberschoollesson19hwk.ui.list.viewModel.ListViewModel
-import crabster.rudakov.sberschoollesson19hwk.ui.main.view.MainActivity
-import crabster.rudakov.sberschoollesson19hwk.ui.main.viewModel.MainViewModel
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.ui.main.factory.ViewModelFactory
+import crabster.rudakov.sberschoolfinalproject.ui.list.adapter.IListItemListener
+import crabster.rudakov.sberschoolfinalproject.ui.list.adapter.ListViewAdapter
+import crabster.rudakov.sberschoolfinalproject.ui.list.viewModel.ListViewModel
+import crabster.rudakov.sberschoolfinalproject.ui.main.view.MainActivity
+import crabster.rudakov.sberschoolfinalproject.ui.main.viewModel.MainViewModel
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_list.*
 import javax.inject.Inject

@@ -1,11 +1,11 @@
-package crabster.rudakov.sberschoollesson19hwk
+package crabster.rudakov.sberschoolfinalproject
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import crabster.rudakov.sberschoollesson19hwk.data.model.CountryItem
-import crabster.rudakov.sberschoollesson19hwk.data.repository.RetrofitRepository
-import crabster.rudakov.sberschoollesson19hwk.ui.country.viewModel.CountryViewModel
-import crabster.rudakov.sberschoollesson19hwk.ui.list.viewModel.ListViewModel
-import crabster.rudakov.sberschoollesson19hwk.ui.main.viewModel.MainViewModel
+import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
+import crabster.rudakov.sberschoolfinalproject.data.repository.RetrofitRepository
+import crabster.rudakov.sberschoolfinalproject.ui.country.viewModel.CountryViewModel
+import crabster.rudakov.sberschoolfinalproject.ui.list.viewModel.ListViewModel
+import crabster.rudakov.sberschoolfinalproject.ui.main.viewModel.MainViewModel
 import io.reactivex.android.plugins.RxAndroidPlugins
 import io.reactivex.schedulers.Schedulers
 import org.junit.Test

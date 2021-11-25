@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.main.factory
+package crabster.rudakov.sberschoolfinalproject.ui.main.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

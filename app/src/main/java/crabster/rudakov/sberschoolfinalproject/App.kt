@@ -1,6 +1,6 @@
-package crabster.rudakov.sberschoollesson19hwk
+package crabster.rudakov.sberschoolfinalproject
 
-import crabster.rudakov.sberschoollesson19hwk.di.component.DaggerAppComponent
+import crabster.rudakov.sberschoolfinalproject.di.component.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 

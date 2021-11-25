@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.ui.splashScreen
+package crabster.rudakov.sberschoolfinalproject.ui.splashScreen
 
 
 import android.view.View
@@ -11,8 +11,8 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
-import crabster.rudakov.sberschoollesson19hwk.R
-import crabster.rudakov.sberschoollesson19hwk.ui.main.view.MainActivity
+import crabster.rudakov.sberschoolfinalproject.R
+import crabster.rudakov.sberschoolfinalproject.ui.main.view.MainActivity
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf

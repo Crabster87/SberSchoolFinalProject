@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "crabster.rudakov.sberschoollesson19hwk"
+        applicationId "crabster.rudakov.sberschoolfinalproject"
         minSdk 21
         targetSdk 31
         versionCode 59

@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.data.model
+package crabster.rudakov.sberschoolfinalproject.data.model
 
 /**
  * Класс, хранящий полученные по запросу данные по стране

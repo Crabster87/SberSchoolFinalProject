@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson19hwk.utils
+package crabster.rudakov.sberschoolfinalproject.utils
 
 /**
  * Singleton объект, хранящий строковые константы
