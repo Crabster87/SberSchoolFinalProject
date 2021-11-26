@@ -51,7 +51,7 @@ class ExampleUnitTest {
 
     /**
      * Проверяется корректность работы метода, устанавливающего список
-     * стран во 'MainViewModel'
+     * стран в 'MainViewModel'
      * */
     @Test
     fun testCountryList() {
@@ -63,7 +63,7 @@ class ExampleUnitTest {
 
     /**
      * Проверяется корректность работы метода, устанавливающего выбранную
-     * страну во 'MainViewModel'
+     * страну в 'MainViewModel'
      * */
     @Test
     fun testSelectedCountry() {
@@ -75,6 +75,9 @@ class ExampleUnitTest {
         assert(country.value == "test1")
     }
 
+    /**
+     * Проверяется корректность получения данных по стране в 'CountryViewModel'
+     * */
     @Test
     fun testSetCountryInfo() {
         listViewModel.getCountryList()
@@ -90,7 +93,10 @@ class ExampleUnitTest {
         assert(country.value?.names?.name == selectedCountry.name)
     }
 
-
+    /**
+     * Проверяется корректность работы метода, устанавливающего флаг
+     * в 'CountryViewModel'
+     * */
     @Test
     fun testGetFlag() {
         countryViewModel.getFlag("ru")
@@ -100,6 +106,23 @@ class ExampleUnitTest {
         assert(flag != null)
     }
 
+    /**
+     * Проверяется корректность работы метода, устанавливающего флаг
+     * в 'CountryViewModel' (отрицательный кейс)
+     * */
+    @Test
+    fun testBreakFlag() {
+        countryViewModel.getFlag("ERROR")
+        Thread.sleep(3000)
+        val flag = countryViewModel.flag().value
+        println("$flag")
+        flag?.contains("html")?.let { assert(it) }
+    }
+
+    /**
+     * Проверяется корректность работы метода, устанавливающего изображения
+     * в 'CountryViewModel'
+     * */
     @Test
     fun testGetImages() {
         countryViewModel.getImages("russia")
@@ -109,18 +132,13 @@ class ExampleUnitTest {
         assert(images != null)
     }
 
-    @Test
-    fun testBreakFlag() {
-        countryViewModel.getFlag("ERRORERROR")
-        Thread.sleep(3000)
-        val flag = countryViewModel.flag().value
-        println("$flag")
-        flag?.contains("html")?.let { assert(it) }
-    }
-
+    /**
+     * Проверяется корректность работы метода, устанавливающего изображения
+     * в 'CountryViewModel' (отрицательный кейс)
+     * */
     @Test
     fun testBreakImages() {
-        countryViewModel.getFlag("ERRORERROR")
+        countryViewModel.getFlag("ERROR")
         Thread.sleep(3000)
         val images = countryViewModel.flag().value
         println("$images")

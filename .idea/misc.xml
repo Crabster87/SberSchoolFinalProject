@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolFinalProject/app/src/main/res/layout/activity_main.xml" value="0.36923076923076925" />
+        <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolFinalProject/app/src/main/res/layout/activity_splash.xml" value="0.36923076923076925" />
+        <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolFinalProject/app/src/main/res/layout/fragment_country.xml" value="0.28425925925925927" />
+        <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolFinalProject/app/src/main/res/layout/image_item.xml" value="0.36923076923076925" />
+        <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolFinalProject/app/src/main/res/layout/list_item.xml" value="0.36923076923076925" />
         <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolLesson19HWK/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.125" />
         <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolLesson19HWK/app/src/main/res/drawable/ic_launcher_background.xml" value="0.125" />
         <entry key="..\:/Users/iar87/Desktop/Projects/SberSchoolLesson19HWK/app/src/main/res/layout-land/fragment_country.xml" value="0.25" />
