@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import crabster.rudakov.sberschoolfinalproject.R
@@ -75,6 +76,12 @@ class ListFragment : DaggerFragment(), IListItemListener {
                 recycler_view.adapter = listAdapter
                 mainViewModel.setCountryList(it)
                 mainViewModel.setProgress(true)
+                recycler_view.addItemDecoration(
+                    DividerItemDecoration(
+                        requireContext(),
+                        DividerItemDecoration.VERTICAL
+                    )
+                )
                 listAdapter.stateRestorationPolicy =
                     RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
                 setFilterListener()

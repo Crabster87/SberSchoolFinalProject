@@ -117,7 +117,6 @@ class ListViewAdapter(
      * */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView?.text = list[position].name
-        holder.imageView?.setImageResource(R.drawable.ic_country)
         holder.layout?.setOnClickListener {
             iListItemListener.onMessageClick(list[position].url)
         }

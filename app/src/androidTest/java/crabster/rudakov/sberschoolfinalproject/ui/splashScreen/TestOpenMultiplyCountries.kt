@@ -47,7 +47,7 @@ class TestOpenMultiplyCountries {
                 withId(R.id.recycler_view),
                 childAtPosition(
                     withClassName(`is`("androidx.constraintlayout.widget.ConstraintLayout")),
-                    1
+                    2
                 )
             )
         )
@@ -68,7 +68,7 @@ class TestOpenMultiplyCountries {
                 withId(R.id.recycler_view),
                 childAtPosition(
                     withClassName(`is`("androidx.constraintlayout.widget.ConstraintLayout")),
-                    1
+                    2
                 )
             )
         )
@@ -89,7 +89,7 @@ class TestOpenMultiplyCountries {
                 withId(R.id.recycler_view),
                 childAtPosition(
                     withClassName(`is`("androidx.constraintlayout.widget.ConstraintLayout")),
-                    1
+                    2
                 )
             )
         )

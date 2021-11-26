@@ -20,6 +20,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/image_view_book"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_country"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_edit_text"
+        app:layout_constraintVertical_bias="0.01" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
@@ -27,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filter_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/image_view_book" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/progress_layout"
@@ -45,6 +57,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
