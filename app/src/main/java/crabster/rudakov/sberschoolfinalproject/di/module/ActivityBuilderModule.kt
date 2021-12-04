@@ -13,7 +13,8 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilderModule {
 
     /**
-     * Генерируется Injector для соответствующих типов
+     * Генерируется subcomponent AndroidInjector для типа MainActivity, в
+     * который добавляются модули ViewModelModule и FragmentBuildersModule
      * */
     @ContributesAndroidInjector(
         modules = [
@@ -21,12 +22,11 @@ abstract class ActivityBuilderModule {
             FragmentBuildersModule::class,
         ]
     )
-
-    /**
-     * Данные модулей передаются в главный Component Dagger2 (AppComponent)
-     * */
     abstract fun contributeMainActivity(): MainActivity
 
+    /**
+     * Генерируется subcomponent AndroidInjector для типа SplashActivity
+     * */
     @ContributesAndroidInjector
     abstract fun contributeSplashActivity(): SplashActivity
 

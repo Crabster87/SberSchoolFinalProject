@@ -1,12 +1,12 @@
 package crabster.rudakov.sberschoolfinalproject.ui.list.viewModel
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
 import crabster.rudakov.sberschoolfinalproject.data.repository.RetrofitRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
@@ -18,6 +18,7 @@ class ListViewModel
 
     private var countryList: MutableLiveData<List<CountryItem>> = MutableLiveData()
     private var exception: MutableLiveData<String> = MutableLiveData()
+    private lateinit var disposable: Disposable
 
     /**
      * Метод возвращает список стран
@@ -41,9 +42,8 @@ class ListViewModel
      * Метод единожды возвращает список 'List<CountryItem>',
      * обрабатывая исключения
      * */
-    @SuppressLint("CheckResult")
     fun getCountryList() {
-        retrofitRepository.getCountryList()
+        disposable = retrofitRepository.getCountryList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
@@ -51,6 +51,15 @@ class ListViewModel
             }, {
                 exception.value = it.toString()
             })
+    }
+
+    /**
+     * В методе помимо основного функционала производится
+     * удаление подписки
+     * */
+    override fun onCleared() {
+        super.onCleared()
+        disposable.dispose()
     }
 
 }

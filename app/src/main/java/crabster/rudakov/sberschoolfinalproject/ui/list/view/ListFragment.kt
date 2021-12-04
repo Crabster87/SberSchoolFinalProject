@@ -37,7 +37,7 @@ class ListFragment : DaggerFragment(), IListItemListener {
         ViewModelProvider(requireActivity(), viewModelFactory).get(MainViewModel::class.java)
     }
     private val listViewModel: ListViewModel by lazy {
-        ViewModelProvider(requireActivity(), viewModelFactory).get(ListViewModel::class.java)
+        ViewModelProvider(this, viewModelFactory).get(ListViewModel::class.java)
     }
     private lateinit var listAdapter: ListViewAdapter
 

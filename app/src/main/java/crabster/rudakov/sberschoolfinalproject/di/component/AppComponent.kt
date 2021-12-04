@@ -9,7 +9,10 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 
 /**
- * Создаётся Component для получения зависимостей
+ * Создаётся Component для получения зависимостей, в который добавляются
+ * модули AndroidInjectionModule(содержащий мультибайндиг коллекций с
+ * фабриками для создания subcomponent, которые были сгенерированы с
+ * помощью аннотации @ContributesAndroidInjector) и ActivityBuilderModule
  * */
 @Component(
     modules = [
@@ -17,9 +20,9 @@ import dagger.android.AndroidInjector
         ActivityBuilderModule::class,
     ]
 )
-
 /**
- * Интерфейс выполняет Inject элемента типа Android
+ * Интерфейс выполняет Inject элемента типа Android в наследников
+ * базовых компонентов (Activity, Fragment, и т.д.)
  * */
 interface AppComponent : AndroidInjector<App> {
 

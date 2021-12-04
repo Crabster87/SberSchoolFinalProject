@@ -1,6 +1,5 @@
 package crabster.rudakov.sberschoolfinalproject.ui.country.viewModel
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,6 +7,7 @@ import crabster.rudakov.sberschoolfinalproject.data.model.CountryInfo
 import crabster.rudakov.sberschoolfinalproject.data.model.Hits
 import crabster.rudakov.sberschoolfinalproject.data.repository.RetrofitRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
@@ -22,6 +22,7 @@ class CountryViewModel
     private val coordinates: MutableLiveData<List<Float>> = MutableLiveData()
     private val flag: MutableLiveData<String> = MutableLiveData()
     private val images: MutableLiveData<List<Hits>> = MutableLiveData()
+    private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     /**
      * Метод возвращает объект, хранящий информацию о стране
@@ -76,23 +77,24 @@ class CountryViewModel
      * @param country название страны
      * @return Single<CountryInfo>
      * */
-    @SuppressLint("CheckResult")
     fun getCountry(country: String) {
         countryInfo.value = null
-        retrofitRepository.getCountry(country)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                countryInfo.value = it
-                setCoordinates(
-                    listOf(
-                        it?.maps?.lat,
-                        it?.maps?.long
-                    ) as List<Float>
-                )
-            }, {
-                exception.value = it.toString()
-            })
+        compositeDisposable.add(
+            retrofitRepository.getCountry(country)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    countryInfo.value = it
+                    setCoordinates(
+                        listOf(
+                            it?.maps?.lat,
+                            it?.maps?.long
+                        ) as List<Float>
+                    )
+                }, {
+                    exception.value = it.toString()
+                })
+        )
     }
 
     /**
@@ -102,16 +104,17 @@ class CountryViewModel
      * @param flag аббревиатура флага
      * @return Single<String>
      * */
-    @SuppressLint("CheckResult")
     fun getFlag(flag: String) {
-        retrofitRepository.getFlag(flag)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                this.flag.value = it
-            }, {
-                exception.value = it.toString()
-            })
+        compositeDisposable.add(
+            retrofitRepository.getFlag(flag)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    this.flag.value = it
+                }, {
+                    exception.value = it.toString()
+                })
+        )
     }
 
     /**
@@ -121,16 +124,17 @@ class CountryViewModel
      * @param country название страны
      * @return Single<ImageList>
      * */
-    @SuppressLint("CheckResult")
     fun getImages(country: String) {
-        retrofitRepository.getImages(country)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                images.value = it.hits
-            }, {
-                exception.value = it.toString()
-            })
+        compositeDisposable.add(
+            retrofitRepository.getImages(country)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    images.value = it.hits
+                }, {
+                    exception.value = it.toString()
+                })
+        )
     }
 
     /**
@@ -141,6 +145,15 @@ class CountryViewModel
      * */
     private fun setCoordinates(coordinates: List<Float>) {
         this.coordinates.value = coordinates
+    }
+
+    /**
+     * В методе помимо основного функционала производится
+     * удаление подписки
+     * */
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.dispose()
     }
 
 }

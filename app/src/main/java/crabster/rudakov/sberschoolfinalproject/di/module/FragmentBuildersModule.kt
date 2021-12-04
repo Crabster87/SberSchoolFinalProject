@@ -13,13 +13,13 @@ import dagger.android.ContributesAndroidInjector
 abstract class FragmentBuildersModule {
 
     /**
-     * Генерируется Injector для ListFragment
+     * Генерируется subcomponent AndroidInjector для типа ListFragment
      * */
     @ContributesAndroidInjector
     abstract fun contributeListFragment(): ListFragment
 
     /**
-     * Генерируется Injector для CountryFragment
+     * Генерируется subcomponent AndroidInjector для типа CountryFragment
      * */
     @ContributesAndroidInjector
     abstract fun contributeCountryFragment(): CountryFragment

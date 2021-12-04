@@ -38,7 +38,7 @@ class CountryFragment : DaggerFragment(), OnMapReadyCallback {
         ViewModelProvider(requireActivity(), viewModelFactory).get(MainViewModel::class.java)
     }
     private val countryViewModel: CountryViewModel by lazy {
-        ViewModelProvider(requireActivity(), viewModelFactory).get(CountryViewModel::class.java)
+        ViewModelProvider(this, viewModelFactory).get(CountryViewModel::class.java)
     }
 
     /**

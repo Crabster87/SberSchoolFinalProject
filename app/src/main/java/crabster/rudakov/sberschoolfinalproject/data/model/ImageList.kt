@@ -1,5 +1,7 @@
 package crabster.rudakov.sberschoolfinalproject.data.model
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * Класс, хранящий список всех URL изображений по стране
  *
@@ -12,8 +14,9 @@ data class ImageList(
 /**
  * Класс, хранящий URL изображения по стране
  *
- * @param webformatURL URL картинки
+ * @param webFormatURL URL картинки
  * */
 data class Hits(
-    val webformatURL: String
+    @SerializedName("webformatURL")
+    val webFormatURL: String
 )
