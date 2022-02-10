@@ -50,9 +50,9 @@ class MainActivity : DaggerAppCompatActivity() {
      * Toast-message в случае его возникновения
      * */
     private fun displayException() {
-        mainViewModel.exception().observe(this, {
+        mainViewModel.exception().observe(this) {
             Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-        })
+        }
     }
 
     /**

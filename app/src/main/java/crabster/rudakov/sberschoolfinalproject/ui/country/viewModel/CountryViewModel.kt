@@ -78,7 +78,6 @@ class CountryViewModel
      * @return Single<CountryInfo>
      * */
     fun getCountry(country: String) {
-        countryInfo.value = null
         compositeDisposable.add(
             retrofitRepository.getCountry(country)
                 .subscribeOn(Schedulers.io())
@@ -130,7 +129,7 @@ class CountryViewModel
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    images.value = it.hits
+                    images.value = it.hits!!
                 }, {
                     exception.value = it.toString()
                 })

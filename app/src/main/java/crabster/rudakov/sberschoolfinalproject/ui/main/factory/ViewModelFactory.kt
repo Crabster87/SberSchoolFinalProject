@@ -20,7 +20,7 @@ class ViewModelFactory
      * @param modelClass класс, описывающий ViewModel
      * @return ViewModel, извлечённая из Map по названию класса
      * */
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return viewModelMap[modelClass]!!.get() as T
     }
 
