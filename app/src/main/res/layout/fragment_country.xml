@@ -11,7 +11,8 @@
         android:id="@+id/flag_image_view"
         android:layout_width="match_parent"
         android:layout_height="35pt"
-        android:src="@drawable/ic_country" />
+        android:src="@drawable/ic_country"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/country_name"

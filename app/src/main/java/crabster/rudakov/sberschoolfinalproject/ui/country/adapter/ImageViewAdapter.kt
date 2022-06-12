@@ -36,7 +36,7 @@ class ImageViewAdapter(private val values: List<Hits>) :
      * */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Picasso.get()
-            .load(values[position].webFormatURL)
+            .load(values[position].src.tiny)
             .resize(500, 400)
             .into(holder.imageView)
     }

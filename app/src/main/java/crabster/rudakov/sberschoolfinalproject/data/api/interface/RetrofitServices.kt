@@ -4,7 +4,6 @@ import crabster.rudakov.sberschoolfinalproject.data.model.CountryInfo
 import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
 import crabster.rudakov.sberschoolfinalproject.data.model.ImageList
 import crabster.rudakov.sberschoolfinalproject.utils.Constants
-import crabster.rudakov.sberschoolfinalproject.utils.Constants.LIST_URL
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -23,7 +22,7 @@ interface RetrofitServices {
      *
      * @return список стран мира
      * */
-    @GET(LIST_URL)
+    @GET(Constants.LIST_URL)
     fun getCountryList(): Single<List<CountryItem>>
 
     /**
@@ -49,13 +48,13 @@ interface RetrofitServices {
 
     /**
      * Метод получает список URL картинок, который выдаётся в результате
-     * поискового запроса по названию страны на сайте https://pixabay.com/
+     * поискового запроса по названию страны на сайте https://api.pexels.com/
      *
-     * @param key ключ пользователя
      * @param order название страны
      * @return список URL изображений
      * */
+    @Headers("Authorization: ${Constants.IMAGES_KEY}")
     @GET(Constants.IMAGES_API)
-    fun getImages(@Query("key") key: String, @Query("q") order: String): Single<ImageList>
+    fun getImages(@Query("query") order: String): Single<ImageList>
 
 }

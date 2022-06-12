@@ -39,7 +39,7 @@ object RetrofitClient {
         .build()
 
     /**
-     * Для работы с запросами к API 'https://pixabay.com/'(загрузка изображений)
+     * Для работы с запросами к API 'https://api.pexels.com/'(загрузка изображений)
      * создаётся объект класса 'Retrofit', принимающий заданный 'URL' и создающий
      * фабрики для сериализации/десериализации объектов, для получения сущностей
      * RxJava(Observable, Flowable, Single, Completable or Maybe)
@@ -59,7 +59,7 @@ object RetrofitClient {
     }
 
     /**
-     * Создаётся объект для работы с запросами к API 'https://pixabay.com/'
+     * Создаётся объект для работы с запросами к API 'https://api.pexels.com/'
      * (загрузка изображений), реализующий интерфейс 'RetrofitServices'
      * */
     val apiImage: RetrofitServices by lazy {
