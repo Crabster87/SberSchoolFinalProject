@@ -4,7 +4,6 @@ import crabster.rudakov.sberschoolfinalproject.data.api.RetrofitClient
 import crabster.rudakov.sberschoolfinalproject.data.model.CountryInfo
 import crabster.rudakov.sberschoolfinalproject.data.model.CountryItem
 import crabster.rudakov.sberschoolfinalproject.data.model.ImageList
-import crabster.rudakov.sberschoolfinalproject.utils.Constants
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -47,13 +46,13 @@ class RetrofitRepository @Inject constructor() {
 
     /**
      * Метод получает список URL картинок, который выдаётся в результате
-     * поискового запроса по названию страны на сайте https://pixabay.com/
+     * поискового запроса по названию страны на сайте https://api.pexels.com/
      *
      * @param country название страны
      * @return список URL изображений
      * */
     fun getImages(country: String): Single<ImageList> {
-        return RetrofitClient.apiImage.getImages(Constants.IMAGES_KEY, country)
+        return RetrofitClient.apiImage.getImages(country)
     }
 
 }

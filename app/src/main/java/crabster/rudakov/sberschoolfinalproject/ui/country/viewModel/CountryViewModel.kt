@@ -129,7 +129,7 @@ class CountryViewModel
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    images.value = it.hits!!
+                    images.value = it.photos!!
                 }, {
                     exception.value = it.toString()
                 })

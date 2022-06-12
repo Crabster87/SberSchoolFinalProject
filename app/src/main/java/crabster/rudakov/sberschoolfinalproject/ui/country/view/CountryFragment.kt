@@ -35,10 +35,10 @@ class CountryFragment : DaggerFragment(), OnMapReadyCallback {
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
     private val mainViewModel: MainViewModel by lazy {
-        ViewModelProvider(requireActivity(), viewModelFactory).get(MainViewModel::class.java)
+        ViewModelProvider(requireActivity(), viewModelFactory)[MainViewModel::class.java]
     }
     private val countryViewModel: CountryViewModel by lazy {
-        ViewModelProvider(this, viewModelFactory).get(CountryViewModel::class.java)
+        ViewModelProvider(this, viewModelFactory)[CountryViewModel::class.java]
     }
 
     /**
@@ -140,12 +140,12 @@ class CountryFragment : DaggerFragment(), OnMapReadyCallback {
      * View фрагмента.
      * Метод moveCamera() моментально перемещает камеру на маркер
      *
-     * @param googleMap объект GoogleMap
+     * @param p0 объект GoogleMap
      * */
     @SuppressLint("CheckResult")
-    override fun onMapReady(googleMap: GoogleMap?) {
+    override fun onMapReady(p0: GoogleMap) {
         countryViewModel.coordinates().observe(viewLifecycleOwner) {
-            googleMap?.apply {
+            p0.apply {
                 val cord = LatLng(it[0].toDouble(), it[1].toDouble())
                 clear()
                 addMarker(
